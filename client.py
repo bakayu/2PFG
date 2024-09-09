@@ -618,7 +618,7 @@ class Player(pygame.sprite.Sprite):
             self.player_rect = self.player_surf.get_rect(bottomleft=(self.player_rect.left, 595))
             if int(self.player_runpunch_r_i) == 3:
                 self.player_rect.x += 10
-                self.hitrect(self.player_rect.center[0], self.player_rect.center[1], 60, 60, True, 3, 3, 8, 8)
+                self.hitrect(self.player_rect.center[0], self.player_rect.center[1], 60, 60, True, 10, 10, 25, 25)
 
         # runpunch_l
         elif (self.player_rect.bottom == 595 and (p2rp)) and not self.face_r:
@@ -637,7 +637,7 @@ class Player(pygame.sprite.Sprite):
             self.player_rect = self.player_surf.get_rect(bottomright=(self.player_rect.right, 595))
             if int(self.player_runpunch_l_i) == 3:
                 self.player_rect.x -= 10
-                self.hitrect(self.player_rect.center[0], self.player_rect.center[1], 60, 60, False, 3, 3, 8, 8)
+                self.hitrect(self.player_rect.center[0], self.player_rect.center[1], 60, 60, False, 10, 10, 25, 25)
 
         # punch_r
         elif (self.player_rect.bottom == 595 and (p2p1 or p2p2 or p2p3)) and self.face_r:
@@ -663,7 +663,7 @@ class Player(pygame.sprite.Sprite):
                 if self.player_punch_r_i >= 13:
                     self.player_punch_r_i = 0
             if int(self.player_punch_r_i) == 2 or int(self.player_punch_r_i) == 6 or int(self.player_punch_r_i) == 10:
-                self.hitrect(self.player_rect.center[0], self.player_rect.center[1], 60, 60, True, 1, 1, 4, 4)
+                self.hitrect(self.player_rect.center[0], self.player_rect.center[1], 60, 60, True, 8, 8, 16, 16)
             self.player_surf = self.player_punch_r_l[int(self.player_punch_r_i)]
             self.player_rect = self.player_surf.get_rect(bottomleft=(self.player_rect.x, 595))
 
@@ -691,7 +691,7 @@ class Player(pygame.sprite.Sprite):
                 if self.player_punch_l_i >= 13:
                     self.player_punch_l_i = 0
             if int(self.player_punch_l_i) == 2 or int(self.player_punch_l_i) == 6 or int(self.player_punch_l_i) == 10:
-                self.hitrect(self.player_rect.center[0], self.player_rect.center[1], 60, 60, False, 1, 1, 4, 4)
+                self.hitrect(self.player_rect.center[0], self.player_rect.center[1], 60, 60, False, 8, 8, 16 ,16)
             self.player_surf = self.player_punch_l_l[int(self.player_punch_l_i)]
             self.player_rect = self.player_surf.get_rect(bottomright=(self.player_rect.right, 595))
 
@@ -709,7 +709,7 @@ class Player(pygame.sprite.Sprite):
                     if p2k2 == False:
                         self.player_kick_r_i = 0
                 if self.player_kick_r_i == 2:
-                    self.hitrect(self.player_rect.center[0], self.player_rect.center[1], 60, 60, True, 1, 1, 3, 3)
+                    self.hitrect(self.player_rect.center[0], self.player_rect.center[1], 60, 60, True, 5, 5, 15, 15)
                 self.player_surf = self.player_kick_r_l[(int(self.player_kick_r_i))]
                 self.player_rect = self.player_surf.get_rect(bottomleft=(self.player_rect.left, 595))
             elif p2k2:
@@ -717,7 +717,7 @@ class Player(pygame.sprite.Sprite):
                 if self.player_kick_r_i >= 8:
                     self.player_kick_r_i = 0
                 if self.player_kick_r_i == 5:
-                    self.hitrect(self.player_rect.center[0], self.player_rect.center[1], 60, 60, True, 1, 1, 3, 3)
+                    self.hitrect(self.player_rect.center[0], self.player_rect.center[1], 60, 60, True, 5, 5, 15, 15)
                 self.player_surf = self.player_kick_r_l[(int(self.player_kick_r_i))]
                 self.player_rect = self.player_surf.get_rect(bottomleft=(self.player_rect.left, 595))
 
@@ -736,7 +736,7 @@ class Player(pygame.sprite.Sprite):
                     if p2k2 == False:
                         self.player_kick_l_i = 0
                 if self.player_kick_l_i == 2:
-                    self.hitrect(self.player_rect.center[0], self.player_rect.center[1], 60, 60, False, 1, 1, 4, 4)
+                    self.hitrect(self.player_rect.center[0], self.player_rect.center[1], 60, 60, False, 8, 8, 16, 16)
                 self.player_surf = self.player_kick_l_l[(int(self.player_kick_l_i))]
                 self.player_rect = self.player_surf.get_rect(bottomright=(self.player_rect.right, 595))
             elif p2k2:
@@ -744,7 +744,7 @@ class Player(pygame.sprite.Sprite):
                 if self.player_kick_l_i >= 8:
                     self.player_kick_l_i = 0
                 if self.player_kick_l_i == 5:
-                    self.hitrect(self.player_rect.center[0], self.player_rect.center[1], 60, 60, False, 1, 1, 4, 4)
+                    self.hitrect(self.player_rect.center[0], self.player_rect.center[1], 60, 60, False, 8, 8, 16, 16)
                 self.player_surf = self.player_kick_l_l[(int(self.player_kick_l_i))]
                 self.player_rect = self.player_surf.get_rect(bottomright=(self.player_rect.right, 595))
 
