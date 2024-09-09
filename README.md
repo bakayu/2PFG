@@ -36,6 +36,14 @@ Finally, run the following code in both the computers to launch the Client (they
 python3 client.py
 ```
 
+### Controls
+ - w/SPACE - jump
+ - d - move right
+ - a - move left
+ - j - punch
+ - k - kick
+ - l - dash
+
 <br>
 
 ## Preview
