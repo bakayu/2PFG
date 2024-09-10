@@ -1,5 +1,5 @@
 # 2PFG - 2 Player Fighter Game
-A 2 player 2D Fighter Game built in python 
+A 2 player 2D Fighter Game built via python 
 
 <br>
 
